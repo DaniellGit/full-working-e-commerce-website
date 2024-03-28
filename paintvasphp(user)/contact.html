@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+        <a href="index.html">Paintvas</a>
+    </div>
+    <div class="open-icon">
+        <i class='bx bxs-circle-quarter'></i>
+    </div>
+    <div class="menu">
+        <ul><li><a href="user_page.php">ACCOUNT</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <!-- <li><a href="">PRODUCT</a></li> -->
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="cart.php" class="cart">CART</a></li>
+           
+            <div class="close-icon">
+                <i class='bx bx-x'></i>
+            </div>
+        </ul>
+    </div>
+</header>
+    
+
+<div class="background">
+    <div class="container">
+      <div class="screen">
+        <div class="screen-body">
+          <div class="screen-body-item left">
+            <div class="app-title">
+              <span>CONTACT</span>
+              <span>US</span>
+              
+            </div>
+            
+            <div class="app-contact">CONTACT INFO : +60 11 11 223</div>
+          </div>
+          <div class="screen-body-item">
+            <div class="app-form">
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="NAME" value="">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="EMAIL">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="CONTACT NO">
+              </div>
+              <div class="app-form-group message">
+                <input class="app-form-control" placeholder="MESSAGE">
+              </div>
+              <div class="app-form-group buttons">
+                <button class="app-form-button">CANCEL</button>
+                <button class="app-form-button">SEND</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper",{
+            loop:true,
+            speed:800,
+            effect:"fade",
+            autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    }
+
+        });
+
+        document.querySelector(".open-icon i").addEventListener("click", function(){
+            document.querySelector(".menu").classList.add("active");
+        })
+
+        document.querySelector(".close-icon i").addEventListener("click", function(){
+            document.querySelector(".menu").classList.remove("active");
+        })
+
+        anime({
+            targets:'.serial',
+            scale:[2,1],
+            opacity:[0,1],
+            easeing:'easeInOutExpo',
+        })
+        anime({
+            targets:'.info h1',
+            translateX:[120,0],
+            opacity:[0,1],
+            easeing:'easeInOutExpo',
+            delay:500,
+        })
+
+        swiper.on('slideChangeTransitionStart',function (){
+
+            anime({
+            targets:'.serial',
+            scale:[2,1],
+            opacity:[0,1],
+            easeing:'easeInOutExpo',
+        })
+        anime({
+            targets:'.info h1',
+            translateX:[120,0],
+            opacity:[0,1],
+            easeing:'easeInOutExpo',
+            delay:500,
+        })
+
+        anime({
+            targets:'.info a',
+            translateX:[-120,0],
+            opacity:[0,1],
+            easeing:'easeInOutExpo',
+            delay:700,
+        })
+
+        })
+
+        var swiper = new Swiper(".swiper",{
+            loop:true,
+            speed:1000,
+            effect:"fade",
+            autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    }
+
+        })
+
+
+    </script>
+</body>
+  </html>
+  

@@ -1,0 +1,292 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    background: linear-gradient(to right, #1f1f2a 0%, #1f1f2a 100%);
+    font-size: 12px;
+  }
+  
+  body, button, input {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+  }
+  
+  .background {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .container {
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .screen {
+    position: relative;
+    background: #3e3e3e;
+    border-radius: 15px;
+  }
+  
+  .screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+  }
+  
+  .screen-body {
+    display: flex;
+  }
+  
+  .screen-body-item {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    font-size: 26px;
+  }
+  
+  
+  .app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #ffffff;
+  }
+  .app-title p{
+    color: #fff;
+  }
+  
+  .app-contact {
+    margin-top: auto;
+    font-size: 8px;
+    color: #888;
+  }
+  
+  .app-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .app-form-group.message {
+    margin-top: 40px;
+  }
+  
+  .app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+  }
+  
+  .app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #ddd;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+  }
+  
+  .app-form-control::placeholder {
+    color: #666;
+  }
+  
+  .app-form-control:focus {
+    border-bottom-color: #ddd;
+  }
+  
+  .app-form-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .app-form-button:hover {
+    color: #1f1f2a;
+  }
+  
+  .dribbble {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+  }
+
+  /* as */
+
+  header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    z-index: 2;
+}
+.logo a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.menu{
+    position: absolute;
+    height: 100vh;
+    width: 60vh;
+    background-color: #1f1f2a;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+
+}
+.menu.active{
+    visibility: visible;
+    opacity:1 ;
+}
+.menu ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.menu ul li{
+    list-style: none;
+    margin: 22px 0;
+
+}
+.menu ul li a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 60px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+.menu ul li a:hover{
+    color: #A6A6A7;
+}
+.menu ul li a:before{
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #A6A6A7;
+    transition: 0.3s ease;
+}
+.menu ul li a::before{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.menu ul li a::after{
+    right: 50%;
+    transform: translateX(50%);
+
+}
+.menu ul li a:hover::before,
+.menu ul li a:hover::after{
+    width: 100%;
+
+}
+.close-icon{
+    position: absolute;
+    top: -18vh;
+    right: -8vh;
+    color: #fff;
+    cursor: pointer;
+}
+.close-icon i{
+    font-size: 2rem;
+    transition: 0.3s ease;
+
+}
+.close-icon i:hover{
+    transform: rotate(100deg);
+}
+.open-icon i{
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+
+}
+.open-icon i:hover{
+    transform: scale(1.2);
+    transform: rotate(360deg);
+
+}
+  /* as */
+  
+  @media screen and (max-width: 520px) {
+    .screen-body {
+      flex-direction: column;
+    }
+  
+    .screen-body-item.left {
+      margin-bottom: 30px;
+    }
+  
+    .app-title{
+      flex-direction: row;
+    }
+  
+    .app-title span {
+      margin-right: 12px;
+    }
+  
+    .app-title:after {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .screen-body {
+      padding: 40px;
+    }
+  
+    .screen-body-item {
+      padding: 0;
+    }
+  }
+  

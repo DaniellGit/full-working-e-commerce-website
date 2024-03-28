@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="container">
+    <div class="home-page">
+        <header>
+            <div class="logo">
+                <a href="">Paintvas</a>
+            </div>
+            <div class="open-icon">
+                <i class='bx bxs-circle-quarter'></i>
+            </div>
+            <div class="menu">
+                <ul><li><a href="login.html">ACCOUNT</a></li>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">PRODUCT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="cart.html">CART</a></li>
+                    <div class="close-icon">
+                        <i class='bx bx-x'></i>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".swiper",{
+                loop:true,
+                speed:800,
+                effect:"fade",
+                autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        }
+    
+            });
+    
+            document.querySelector(".open-icon i").addEventListener("click", function(){
+                document.querySelector(".menu").classList.add("active");
+            })
+    
+            document.querySelector(".close-icon i").addEventListener("click", function(){
+                document.querySelector(".menu").classList.remove("active");
+            })
+    
+           
+    
+    
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+.container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   padding-bottom: 60px;
+   background-color: #1f1f2a;
+}
+
+.container .content{
+   text-align: center;
+}
+
+.container .content h3{
+   font-size: 30px;
+   color:white;
+}
+
+.container .content h3 span{
+   color:#fff;
+   border-radius: 5px;
+   padding:0 15px;
+}
+
+.container .content h1{
+   font-size: 50px;
+   color:white;
+}
+
+.container .content h1 span{
+   color:rgb(122, 49, 122);
+}
+
+.container .content p{
+   font-size: 19px;
+   margin-bottom: 20px;
+   color: white;
+}
+
+.container .content .btn{
+   display: inline-block;
+   padding:10px 30px;
+   font-size: 20px;
+   background: #333;
+   color:#fff;
+   margin:0 5px;
+   text-transform: capitalize;
+}
+
+.container .content .btn:hover{
+   background: rgb(81, 31, 81);
+}
+
+.form-container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   padding-bottom: 60px;
+   background: #eee;
+}
+
+.form-container form{
+   padding:20px;
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgba(0,0,0,.1);
+   background: #fff;
+   text-align: center;
+   width: 500px;
+}
+
+.form-container form h3{
+   font-size: 30px;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   color:#333;
+}
+
+.form-container form input,
+.form-container form select{
+   width: 100%;
+   padding:10px 15px;
+   font-size: 17px;
+   margin:8px 0;
+   background: #eee;
+   border-radius: 5px;
+}
+
+.form-container form select option{
+   background: #fff;
+}
+
+.form-container form .form-btn{
+   background: #fbd0d9;
+   color:crimson;
+   text-transform: capitalize;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.form-container form .form-btn:hover{
+   background: crimson;
+   color:#fff;
+}
+
+.form-container form p{
+   margin-top: 10px;
+   font-size: 20px;
+   color:#333;
+}
+
+.form-container form p a{
+   color:crimson;
+}
+
+.form-container form .error-msg{
+   margin:10px 0;
+   display: block;
+   background: crimson;
+   color:#fff;
+   border-radius: 5px;
+   font-size: 20px;
+   padding:10px;
+}
+
+/* as */
+
+header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    z-index: 2;
+    background-color: #1f1f2a;
+}
+.logo a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.menu{
+    position: absolute;
+    height: 100vh;
+    width: 60vh;
+    background-color: #1f1f2a;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+
+}
+.menu.active{
+    visibility: visible;
+    opacity:1 ;
+}
+.menu ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.menu ul li{
+    list-style: none;
+    margin: 22px 0;
+
+}
+.menu ul li a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 60px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+.menu ul li a:hover{
+    color: #A6A6A7;
+}
+.menu ul li a:before{
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #A6A6A7;
+    transition: 0.3s ease;
+}
+.menu ul li a::before{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.menu ul li a::after{
+    right: 50%;
+    transform: translateX(50%);
+
+}
+.menu ul li a:hover::before,
+.menu ul li a:hover::after{
+    width: 100%;
+
+}
+.close-icon{
+    position: absolute;
+    top: -18vh;
+    right: -8vh;
+    color: #fff;
+    cursor: pointer;
+}
+.close-icon i{
+    font-size: 2rem;
+    transition: 0.3s ease;
+
+}
+.close-icon i:hover{
+    transform: rotate(100deg);
+}
+.open-icon i{
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+
+}
+.open-icon i:hover{
+    transform: scale(1.2);
+    transform: rotate(360deg);
+
+}
+  /* as */

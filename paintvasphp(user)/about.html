@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>About Us Section Design</title>
+	<link rel="stylesheet" type="text/css" href="about.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400'1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+        <div class="logo">
+            <a href="index.html">Paintvas</a>
+        </div>
+        <div class="open-icon">
+            <i class='bx bxs-circle-quarter'></i>
+        </div>
+        <div class="menu">
+            <ul><li><a href="user_page.php">ACCOUNT</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <!-- <li><a href="">PRODUCT</a></li> -->
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="cart.php" class="cart">CART</a></li>
+               
+                <div class="close-icon">
+                    <i class='bx bx-x'></i>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+	<section class="about">
+		<div class="main">
+			<img src="7f5fk0.jpg">
+			<div class="about-text">
+				<h1>About Our Company</h1>
+				<h5>Painting<span> & Painter</span></h5>
+				<p>Welcome to Paintvas, where we're passionate about all things paint! From vibrant canvases to stunning murals,<br> we offer a wide range of painting products to help you bring your creative vision to life.<br> Our commitment to supporting local painters means that you'll find a range of unique and eye-catching works in our collection that are sure to impress. Whether you're an experienced artist or just starting out,<br> we're here to help you unleash your inner creativity. With high-quality paints, brushes, expert advice, and inspiration, we believe that art has the power to transform lives. <br>So explore our selection today and discover the beauty and joy of painting for yourself!</p>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper",{
+            loop:true,
+            speed:800,
+            effect:"fade",
+            autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    }
+
+        });
+
+        document.querySelector(".open-icon i").addEventListener("click", function(){
+            document.querySelector(".menu").classList.add("active");
+        })
+
+        document.querySelector(".close-icon i").addEventListener("click", function(){
+            document.querySelector(".menu").classList.remove("active");
+        })
+
+        anime({
+            targets:'.serial',
+            scale:[2,1],
+            opacity:[0,1],
+            easeing:'easeInOutExpo',
+        })
+        anime({
+            targets:'.info h1',
+            translateX:[120,0],
+            opacity:[0,1],
+            easeing:'easeInOutExpo',
+            delay:500,
+        })
+
+        swiper.on('slideChangeTransitionStart',function (){
+
+            anime({
+            targets:'.serial',
+            scale:[2,1],
+            opacity:[0,1],
+            easeing:'easeInOutExpo',
+        })
+        anime({
+            targets:'.info h1',
+            translateX:[120,0],
+            opacity:[0,1],
+            easeing:'easeInOutExpo',
+            delay:500,
+        })
+
+        anime({
+            targets:'.info a',
+            translateX:[-120,0],
+            opacity:[0,1],
+            easeing:'easeInOutExpo',
+            delay:700,
+        })
+
+        })
+
+        var swiper = new Swiper(".swiper",{
+            loop:true,
+            speed:1000,
+            effect:"fade",
+            autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    }
+
+        })
+
+
+    </script>
+
+</body>
+</html>
